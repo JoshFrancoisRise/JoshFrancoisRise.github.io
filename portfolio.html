@@ -1,27 +1,181 @@
-<main>
-<div class="content">
-    <h1>Portfolio</h1>
-    <h3>FSD Projects</h3>
-    <ul id="portfolio">
-<li>
-  <a href="fsd-projects/platformer/">Platformer: A cannon-dodging adventure game for Halleb0t</a>
-</li>
-<li>
-  <a href="fsd-projects/bouncing-box/">Bouncing Box: A fun introduction to web game development</a>
-</li>
-<li>
-  <a href="fsd-projects/circularity/">Circularity: A poetic motion experiment with circles</a>
-</li>
-<li>
- <a href="fsd-projects/runtime/">Runtime : Fearless HalleBot goes on a side-scrolling adventure!</a>
-</li>
-    </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    :root {
+      --bg: #0f1220;
+      --surface: #1a1e33;
+      --text: #e8eaf6;
+      --muted: #a0a6c0;
+      --accent: #6c8cff;
+      --accent-hover: #8aa2ff;
+      --border: #2a3050;
+    }
 
-    <!-- ASD Projects will go here -->
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-  </div>
-  </main>
-</div>
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+    }
+
+    main {
+      width: 100%;
+      max-width: 780px;
+    }
+
+    .content {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+      background: linear-gradient(90deg, var(--accent), #b18cff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    h1 + p {
+      color: var(--muted);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      margin: 2rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    ul {
+      list-style: none;
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    li a {
+      display: block;
+      padding: 1rem 1.25rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    li a::after {
+      content: "→";
+      position: absolute;
+      right: 1.25rem;
+      top: 50%;
+      transform: translateY(-50%) translateX(-4px);
+      opacity: 0;
+      color: var(--accent);
+      transition: all 0.2s ease;
+    }
+
+    li a:hover {
+      background: rgba(108, 140, 255, 0.08);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    li a:hover::after {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0);
+    }
+
+    li a .title {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    li a .desc {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 500px) {
+      .content { padding: 1.5rem; }
+      h1 { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="content">
+      <h1>Portfolio</h1>
+      <p>A collection of projects I've built and explored.</p>
+
+      <section>
+        <h2>FSD Projects</h2>
+        <ul id="portfolio">
+          <li>
+            <a href="fsd-projects/platformer/">
+              <span class="title">Platformer</span>
+              <span class="desc">A cannon-dodging adventure game for Halleb0t</span>
+            </a>
+          </li>
+          <li>
+            <a href="fsd-projects/bouncing-box/">
+              <span class="title">Bouncing Box</span>
+              <span class="desc">A fun introduction to web game development</span>
+            </a>
+          </li>
+          <li>
+            <a href="fsd-projects/circularity/">
+              <span class="title">Circularity</span>
+              <span class="desc">A poetic motion experiment with circles</span>
+            </a>
+          </li>
+          <li>
+            <a href="fsd-projects/runtime/">
+              <span class="title">Runtime</span>
+              <span class="desc">Fearless HalleBot goes on a side-scrolling adventure!</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>ASD Projects</h2>
+        <ul id="asd-portfolio">
+          <li>
+            <a href="#">
+              <span class="title">Coming Soon</span>
+              <span class="desc">More projects on the way.</span>
+            </a>
+          </li>
+        </ul>
+      </section>
     </div>
-  </body>
+  </main>
+</body>
 </html>
