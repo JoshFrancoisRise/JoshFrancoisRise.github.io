@@ -17,3 +17,7 @@ canvas {
 img {
   display: none;
 }
+
+#projectile {
+  width: 20px
+}

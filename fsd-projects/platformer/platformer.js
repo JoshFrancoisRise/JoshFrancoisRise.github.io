@@ -32,7 +32,7 @@ $(function () {
 
     // TODO 2 - Create Platforms
 
-createPlatform(400, 400, 20, 20);
+createPlatform(400, 460, 20, 20);
 createPlatform(1350, 400, 50, 50, "red");
 
 createPlatform(0, 500, 200, 20);
@@ -44,7 +44,7 @@ createPlatform(1350, 400, 50, 50, "red");
 createPlatform(500, 400, 20, 20);
 createPlatform(1350, 400, 50, 50, "blue");
 
-createPlatform(700, 400, 20, 20);
+createPlatform(700, 470, 20, 20);
 createPlatform(1350, 400, 50, 50, "red");
 
 createPlatform(1000, 400, 20, 20);
@@ -63,6 +63,8 @@ createPlatform(1350, 400, 50, 50, "red");
 createCollectable("diamond", 1350, 170, 0.5, 0.7);
 
 createCollectable("diamond", 700, 375, 0.5, 0.7);
+
+createCollectable("diamond", 400, 400, 0.5, 0.7);
 
 
     
