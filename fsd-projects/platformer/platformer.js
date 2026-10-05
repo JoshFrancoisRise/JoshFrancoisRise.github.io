@@ -60,11 +60,11 @@ createPlatform(1340, 400, 20, 130);
 createPlatform(1350, 400, 50, 50, "red");
 
     // TODO 3 - Create Collectables
-createCollectable("diamond", 1350, 170, 0.5, 0.7);
+createCollectable("help", 1350, 170, 0.5, 0.7);
 
-createCollectable("diamond", 700, 375, 0.5, 0.7);
+createCollectable("help", 700, 375, 0.5, 0.7);
 
-createCollectable("diamond", 400, 400, 0.5, 0.7);
+createCollectable("help", 400, 400, 0.5, 0.7);
 
 
     
